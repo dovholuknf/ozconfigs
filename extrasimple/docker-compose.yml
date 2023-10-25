@@ -71,9 +71,9 @@ services:
     image: openziti/zac
     working_dir: /usr/src/app
     environment:
-      - ZAC_SERVER_CERT_CHAIN=/persistent/pki/${ZITI_CTRL_EDGE_ADVERTISED_ADDRESS:-ziti-edge-controller}-intermediate/certs/${ZITI_CTRL_EDGE_ADVERTISED_ADDRESS:-ziti-edge-controller}-server.cert
-      - ZAC_SERVER_KEY=/persistent/pki/${ZITI_CTRL_EDGE_ADVERTISED_ADDRESS:-ziti-edge-controller}-intermediate/keys/${ZITI_CTRL_EDGE_ADVERTISED_ADDRESS:-ziti-edge-controller}-server.key
-      - ZITI_CTRL_EDGE_ADVERTISED_ADDRESS=${ZITI_CTRL_EDGE_ADVERTISED_ADDRESS:-ziti-edge-controller}
+      - ZAC_SERVER_CERT_CHAIN=/persistent/pki/${ZITI_FULLY_QUALIFIED_DOMAIN_NAME}-intermediate/certs/${ZITI_FULLY_QUALIFIED_DOMAIN_NAME}-server.cert
+      - ZAC_SERVER_KEY=/persistent/pki/${ZITI_FULLY_QUALIFIED_DOMAIN_NAME}-intermediate/keys/${ZITI_FULLY_QUALIFIED_DOMAIN_NAME}-server.key
+      - ZITI_CTRL_EDGE_ADVERTISED_ADDRESS=${ZITI_FULLY_QUALIFIED_DOMAIN_NAME}
       - ZITI_CTRL_EDGE_ADVERTISED_PORT=${ZITI_CTRL_PORT}
       - ZITI_CTRL_NAME=${ZITI_CTRL_NAME:-ziti-edge-controller}
       - PORTTLS=8443
