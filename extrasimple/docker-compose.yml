@@ -72,7 +72,7 @@ services:
     working_dir: /usr/src/app
     environment:
       - ZAC_SERVER_CERT_CHAIN=/persistent/pki/ziti-edge-controller-intermediate/certs/${ZITI_FULLY_QUALIFIED_DOMAIN_NAME}-server.cert
-      - ZAC_SERVER_KEY=/persistent/pki/ziti-edge-controller--intermediate/keys/${ZITI_FULLY_QUALIFIED_DOMAIN_NAME}-server.key
+      - ZAC_SERVER_KEY=/persistent/pki/ziti-edge-controller-intermediate/keys/${ZITI_FULLY_QUALIFIED_DOMAIN_NAME}-server.key
       - ZITI_CTRL_EDGE_ADVERTISED_ADDRESS=${ZITI_FULLY_QUALIFIED_DOMAIN_NAME}
       - ZITI_CTRL_EDGE_ADVERTISED_PORT=${ZITI_CTRL_PORT}
       - ZITI_CTRL_NAME=${ZITI_CTRL_NAME:-ziti-edge-controller}
